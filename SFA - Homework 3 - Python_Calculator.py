@@ -15,13 +15,10 @@ def multiply(x,y):
 
 # Define a method for division
 def divide(x,y):
-    try:
       z = x / y
       return z
-    except ZeroDivisionError:
-     print('Error: Cannot divide by zero, please try again \nFirst number')
+   
      
-
 # Loop for checking the desired calculation if the input is valid
 while True:
 
