@@ -19,7 +19,8 @@ def divide(x,y):
       z = x / y
       return z
     except ZeroDivisionError:
-      print('Error: Cannot divide by zero')
+     print('Error: Cannot divide by zero, please try again \nFirst number')
+     
 
 # Loop for checking the desired calculation if the input is valid
 while True:
@@ -54,6 +55,7 @@ while True:
         print('Please enter a valid number') 
         x = input()
         
+        
   print('Please enter the second number')
   y = input()
   try:  
@@ -71,16 +73,29 @@ while True:
   # Check the desired calculation and print the result
   if calculation == '1':
     print(x, '+', y, '=', add(x,y))
+    print(x, '+', y, '=',"{:.2f}".format(add(x,y)))
+    print(x, '+', y, '=',"{:.3f}".format(add(x,y)))
+    print(x, '+', y, '=',"{:.4f}".format(add(x,y)))
   elif calculation == '2':
     print(x, '-', y, '=', subtract(x,y))
+    print(x, '+', y, '=',"{:.2f}".format(subtract(x,y)))
+    print(x, '+', y, '=',"{:.3f}".format(subtract(x,y)))
+    print(x, '+', y, '=',"{:.4f}".format(subtract(x,y)))
   elif calculation == '3':
     print(x, '*', y, '=', multiply(x,y))
+    print(x, '+', y, '=',"{:.2f}".format(multiply(x,y)))
+    print(x, '+', y, '=',"{:.3f}".format(multiply(x,y)))
+    print(x, '+', y, '=',"{:.4f}".format(multiply(x,y)))
   else:
     calculation == '4'
+  if y!=0:
     print(x, '/', y, '=', divide(x,y))
+    print(x, '+', y, '=',"{:.2f}".format(divide(x,y)))
+    print(x, '+', y, '=',"{:.3f}".format(divide(x,y)))
+    print(x, '+', y, '=',"{:.4f}".format(divide(x,y)))
+  else:
+    print('Error: Cannot divide by zero')
   
-  
-
   print('Would you like to proceed with a new calculation? \n Please enter y or n')
   if input() != "y":
     exit()
