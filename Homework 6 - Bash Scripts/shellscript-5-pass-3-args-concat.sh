@@ -13,7 +13,7 @@ printf "\n$1$2$3"
 if  [ $# -gt 3 ]
 	then
 
-	printf "You have supplied more that 3 args and those will be printed below not cat-ed together ;)"
+	printf "\nYou have supplied more that 3 args and those will be printed below not cat-ed together ;)"
 
 	shift 3
 	while [ $# -gt 0 ]
