@@ -8,18 +8,20 @@ while [ $# -lt 3 ]
 	set -- "$@" $args_added
 done
 
-echo "\n$1$2$3"
+printf "\n$1$2$3"
  
 if  [ $# -gt 3 ]
 	then
 
-	echo "You have supplied more that 3 args and those will be printed below not cat-ed together ;)"
+	printf "You have supplied more that 3 args and those will be printed below not cat-ed together ;)"
 
 	shift 3
 	while [ $# -gt 0 ]
 	do
-	echo "$1"
+	printf "\n$1"
 	shift
 	done
 
 fi
+
+printf "\n"
